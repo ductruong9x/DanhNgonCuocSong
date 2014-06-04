@@ -1,18 +1,16 @@
 package com.truongtvd.danhngon.util;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import com.facebook.Response;
+import com.facebook.model.GraphObject;
+import com.truongtvd.danhngon.model.CommentInfo;
+import com.truongtvd.danhngon.model.ItemNewFeed;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.text.TextUtils;
-
-import com.facebook.Response;
-import com.facebook.model.GraphObject;
-import com.truongtvd.anhvui.model.CommentInfo;
-import com.truongtvd.anhvui.model.ItemNewFeed;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class JsonUtils {
 	public static JSONObject parseResponToJson(Response response) {

@@ -1,20 +1,16 @@
 package com.truongtvd.danhngon.network;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-
-import khandroid.ext.apache.http.message.BasicNameValuePair;
-
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.util.Log;
 
-import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.truongtvd.anhvui.common.Constants;
+import com.truongtvd.danhngon.commom.Constants;
+
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 public class NetworkOperator {
 	private static final String TAG = NetworkOperator.class.getSimpleName();
