@@ -1,2 +1,3 @@
 include ':DanhNgonCuocSong', ':actionbarsherlock', ':VolleyFramework'
 include ':facebookSDK'
+include ':tabSlidingShip'

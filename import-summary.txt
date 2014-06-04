@@ -7,7 +7,7 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* build.xml
+* pom.xml
 
 Replaced Jars with Dependencies:
 --------------------------------
@@ -26,10 +26,10 @@ Moved Files:
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => facebookSDK/src/main/AndroidManifest.xml
-* assets/ => facebookSDK/src/main/assets/
-* res/ => facebookSDK/src/main/res/
-* src/ => facebookSDK/src/main/java/
+* AndroidManifest.xml => tabSlidingShip/src/main/AndroidManifest.xml
+* assets/ => tabSlidingShip/src/main/assets/
+* res/ => tabSlidingShip/src/main/res/
+* src/ => tabSlidingShip/src/main/java/
 
 Missing Android Support Repository:
 -----------------------------------

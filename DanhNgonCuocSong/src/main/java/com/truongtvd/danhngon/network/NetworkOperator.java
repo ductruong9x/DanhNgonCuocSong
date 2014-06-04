@@ -45,26 +45,11 @@ public class NetworkOperator {
 		requestQueue.add(request);
 	}
 
-	public void getInfo(Response.Listener<JSONObject> responseSuccessListener,
-			Response.ErrorListener responseErrorListener) {
-
-		String endpoint = "";
-		try {
-			endpoint = url + URLEncoder.encode(Constants.QUERY_INFO, "UTF-8");
-			MyGetRequest request = new MyGetRequest(context, endpoint, null,
-					responseSuccessListener, responseErrorListener);
-			requestQueue.add(request);
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	public void getNewFeed(int limit,
 			Response.Listener<JSONObject> responseSuccessListener,
 			Response.ErrorListener responseErrorListener) {
 
-		String params = "select object_id,caption,src_big,like_info,comment_info,created FROM photo WHERE owner = '250988853947'  LIMIT "
+		String params = "select object_id,caption,src_big,like_info,comment_info,created FROM photo WHERE owner = '111592842189117'  LIMIT "
 				+ limit;
 
 		String endpoint = "";

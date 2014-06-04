@@ -1,8 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DanhNgonCuocSong</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Daily Quotations</string>
+    <string name="app_id">284538728393791</string>
+    <string name="facebook">Login Facebook using Application</string>
+
+    <string name="thank">I really thank you when you evaluate my application ...</string>
+    <string name="title">Vote for my app :)</string>
+    <string name="content">You can vote for my application???</string>
+    <string name="ok">Ok</string>
+    <string name="novote">Do not show again</string>
+    <string name="later">Later</string>
 
 </resources>
