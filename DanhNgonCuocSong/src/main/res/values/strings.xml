@@ -10,5 +10,9 @@
     <string name="ok">Ok</string>
     <string name="novote">Do not show again</string>
     <string name="later">Later</string>
+    <string name="like">%d Likes</string>
+    <string name="comment">%d Comments</string>
+    <string name="downloading">Downloading</string>
+    <string name="complete">Completed</string>
 
 </resources>

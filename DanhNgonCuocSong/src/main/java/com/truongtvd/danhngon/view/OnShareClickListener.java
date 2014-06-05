@@ -48,18 +48,16 @@ public class OnShareClickListener implements OnClickListener {
 		}
 		dialog.show();
 		Bundle postParams = new Bundle();
-		postParams.putString("name", "Ảnh vui");
-		postParams.putString("message", item.getImage());
+		postParams.putString("name", "Daily Quotations");
 		postParams.putString("description", item.getMessage());
-		postParams
-				.putString("link",
-						"https://play.google.com/store/apps/details?id=com.truongtvd.anhvui");
+		postParams.putString("link",
+						"https://play.google.com/store/apps/details?id=com.truongtvd.danhngon");
 		postParams.putString("picture", item.getImage());
 
 		Request.Callback callback = new Request.Callback() {
 			public void onCompleted(Response response) {
 				dialog.dismiss();
-				Toast.makeText(context, "Share successfuly	",
+				Toast.makeText(context, "Share successfully",
 						Toast.LENGTH_SHORT).show();
 			}
 		};

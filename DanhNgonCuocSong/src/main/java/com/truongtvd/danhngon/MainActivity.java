@@ -2,7 +2,6 @@ package com.truongtvd.danhngon;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -10,11 +9,9 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Window;
 import com.android.volley.VolleyError;
 import com.facebook.HttpMethod;
-
 import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
-
 import com.facebook.model.GraphUser;
 import com.truongtvd.danhngon.adapter.DetailAdapter;
 import com.truongtvd.danhngon.model.ItemNewFeed;
@@ -99,7 +96,7 @@ public class MainActivity extends SherlockActivity {
 
 
     private void getNewFeed() {
-        operator.getNewFeed(20, getSuccess(), getError());
+        operator.getNewFeed(200, getSuccess(), getError());
     }
 
     private com.android.volley.Response.Listener<JSONObject> getSuccess() {

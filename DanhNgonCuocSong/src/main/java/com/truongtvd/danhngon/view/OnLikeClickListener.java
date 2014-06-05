@@ -1,7 +1,5 @@
 package com.truongtvd.danhngon.view;
 
-import java.util.Arrays;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -15,11 +13,14 @@ import com.facebook.HttpMethod;
 import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
-import com.facebook.SessionState;
 import com.facebook.Session.NewPermissionsRequest;
 import com.facebook.Session.StatusCallback;
+import com.facebook.SessionState;
+import com.truongtvd.danhngon.R;
 import com.truongtvd.danhngon.adapter.DetailAdapter;
 import com.truongtvd.danhngon.model.ItemNewFeed;
+
+import java.util.Arrays;
 
 public class OnLikeClickListener implements OnClickListener {
 	private DetailAdapter.ViewHolder viewHolder;
@@ -42,12 +43,12 @@ public class OnLikeClickListener implements OnClickListener {
 		if (isLike == false) {
 			int lik = like + 1;
 			new LikeFacebook().execute(item.getPost_id());
-			viewHolder.tvCountLike.setText(lik + "");
+			viewHolder.tvCountLike.setText(context.getString(R.string.like,lik));
 			item.setLike_count(lik);
 			isLike = true;
 		} else {
 			int unlike = item.getLike_count() - 1;
-			viewHolder.tvCountLike.setText(unlike + "");
+			viewHolder.tvCountLike.setText(context.getString(R.string.like,unlike));
 			item.setLike_count(unlike);
 			isLike = false;
 		}
@@ -66,7 +67,7 @@ public class OnLikeClickListener implements OnClickListener {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
 			dialog.dismiss();
-			Toast.makeText(context, "Like sucessfuly", Toast.LENGTH_SHORT)
+			Toast.makeText(context, "Like successfully", Toast.LENGTH_SHORT)
 					.show();
 		}
 
@@ -74,7 +75,7 @@ public class OnLikeClickListener implements OnClickListener {
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
 			super.onPreExecute();
-			dialog.setMessage("Loading,,,");
+			dialog.setMessage("Loading...");
 			dialog.show();
 
 		}
