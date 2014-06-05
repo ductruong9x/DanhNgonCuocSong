@@ -13,6 +13,8 @@ import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.model.GraphUser;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.truongtvd.danhngon.adapter.DetailAdapter;
 import com.truongtvd.danhngon.model.ItemNewFeed;
 import com.truongtvd.danhngon.network.NetworkOperator;
@@ -33,12 +35,16 @@ public class MainActivity extends SherlockActivity {
     private DetailAdapter adapter;
     private Session session;
     private ProgressBar loading;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        adView=(AdView)findViewById(R.id.ad);
+        adView.loadAd(new AdRequest());
+
         operator = NetworkOperator.getInstance().init(this);
         vpMain = (ViewPager) findViewById(R.id.vpMain);
         session=Session.getActiveSession();
@@ -120,5 +126,13 @@ public class MainActivity extends SherlockActivity {
                 loading.setVisibility(View.GONE);
             }
         };
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(adView!=null){
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 }

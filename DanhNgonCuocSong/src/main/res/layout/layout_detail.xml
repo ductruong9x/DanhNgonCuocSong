@@ -5,6 +5,8 @@
     android:background="@drawable/bg_default"
     android:orientation="vertical">
 
+
+
     <com.truongtvd.danhngon.view.FadeInNetworkImageView
         android:id="@+id/imgDetial"
         android:layout_width="match_parent"
@@ -63,7 +65,10 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-                    android:background="@color/white" />
+                    android:background="@color/white"
+                    android:text="Send"
+                    android:textColor="@color/app_color"
+                    android:gravity="center" />
             </LinearLayout>
         </RelativeLayout>
 
