@@ -35,12 +35,12 @@
                 android:id="@+id/lvListComment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/layout_comment"
+                android:layout_above="@+id/layout_comment1"
                 android:divider="@null"
                 android:dividerHeight="0dp"></ListView>
 
             <LinearLayout
-                android:id="@+id/layout_comment"
+                android:id="@+id/layout_comment1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
